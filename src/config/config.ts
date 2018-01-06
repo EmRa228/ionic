@@ -82,10 +82,15 @@ import { isArray, isDefined, isFunction, isObject } from '../util/util';
  * Any value can be added to config, and looked up at a later in any component.
  *
  * ```js
- * config.set('ios', 'favoriteColor', 'green');
+ * import { Config } from 'ionic-angular';
+ * export class theClass {
+ *    constructor(public config:Config ) {
+ *        config.set('ios', 'favoriteColor', 'green');
  *
- * // from any page in your app:
- * config.get('favoriteColor'); // 'green' when iOS
+ *        // from any page in your app:
+ *        config.get('favoriteColor'); // 'green' when iOS
+ *    }
+ * }
  * ```
  *
  *
